@@ -2,34 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import Author from "./_child/Author";
 
-export default function Categories() {
+export default function Related() {
   return (
-    <section className="container mx-auto md:px-20 py-10">
-      {/* grid of two cols categories */}
-      <div className="grid md:grid-cols-2">
-        {/* column 1 */}
-        <div className="item">
-          <h1 className="font-bold text-4xl py-12 ">Business</h1>
-          <div className="flex flex-col gap-6">
-            {/* posts */}
-            {post()}
-            {post()}
-            {post()}
-            {post()}
-          </div>
-        </div>
-        {/* column 2 */}
-        <div className="item">
-          <h1 className="font-bold text-4xl py-12 ">Pleasure</h1>
-          <div className="flex flex-col gap-6">
-            {/* posts */}
-            {post()}
-            {post()}
-            {post()}
-            {post()}
-            {post()}
-          </div>
-        </div>
+    <section className="pt-20">
+      <h1 className="font-bold text-3xl py-10">Related</h1>
+      <div className="flex- flex-col gap-10">
+        {post()}
+        {post()}
+        {post()}
+        {post()}
       </div>
     </section>
   );
@@ -43,7 +24,7 @@ function post() {
           <Image
             src={"/images/img1.jpg"}
             width={300}
-            height={250}
+            height={200}
             className="rounded"
           />
         </Link>
